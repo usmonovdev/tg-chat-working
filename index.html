@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="userBox">
+            <img src="./img/v.jpg" alt="User Photo">
+            <div>
+                <p class="userName">Usmonov Azizbek <ion-icon name="volume-medium-outline"></ion-icon></p>
+                <p class="userTime">online</p>
+            </div>
+        </div>
+        <div class="chatBox" id="chatMes">
+            <img src="" alt="chat gif" id="gif">
+        </div>
+        <div class="inputBox">
+            <input type="file" id="sendFile">
+            <label for="sendFile">
+                <ion-icon name="attach-outline" class="sendFileIcon"></ion-icon>
+            </label>
+            <input type="text" id="input" placeholder="Write a message..." focused>
+            <i class="ri-emotion-line emojiIcon"></i>
+            <ion-icon name="send" class="send" onclick="share()"></ion-icon>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

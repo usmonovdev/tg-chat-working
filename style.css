@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --asosiy: #fff;
+    --black: #3a3a3a;
+    --blue: #168ADE;
+    --second: #a8a8a8;
+    --hover: #f1f1f1;
+    --user-text: #a0d6ff;
+}
+
+img {
+    pointer-events: none;
+}
+
+body {
+    height: 100vh;
+    background: var(--asosiy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 360px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.24);
+}
+
+.container .userBox {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px 20px;
+}
+
+.userBox img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.userBox .userName {
+    font-weight: 600;
+    color: var(--black);
+}
+
+.userBox .userTime {
+    color: var(--blue) !important;
+}
+
+.container .chatBox {
+    overflow-y:auto;
+    overflow-x: hidden;
+    height: 450px;
+    padding: 10px;
+    background-image: url(./img/pattern.svg);
+    background-size: cover;
+    background-color: #ddf0ff;
+}
+
+.chatBox img {
+    width: 120px;
+    padding: 20px 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.443);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.chatBox span {
+    padding: 5px;
+    max-width: 70% !important;
+    display: block;
+    word-wrap: break-word;
+    background: var(--user-text);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    position: relative;
+    right: -105px;
+    top: 94.5%;
+    text-align: right;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137);
+}
+
+.container .inputBox {
+    padding: 10px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inputBox .send  {
+    border: none;
+    color: var(--blue) !important;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.inputBox input {
+    width: 240px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+}
+
+.inputBox #sendFile {
+    display: none;
+}
+
+.inputBox .sendFileIcon {
+    font-size: 1.5em;
+    transform: rotate(45deg);
+    color: var(--second);
+    cursor: pointer;
+}
+
+.inputBox .emojiIcon {
+    font-size: 1.5em;
+    color: var(--second);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
