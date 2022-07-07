@@ -110,6 +110,7 @@ body {
 
 .inputBox input {
     width: 240px;
+    height: 40px;
     margin-right: 10px;
     outline: none;
     border: none;
