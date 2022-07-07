@@ -75,6 +75,22 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    transform-origin: center;
+    animation: scale 200ms both;
+}
+
+@keyframes scale {
+    0% {
+        transform: translate(-50%, -50%) scale(3);
+        transform-origin: center;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        transform-origin: center;
+        opacity: 1;
+    }
 }
 
 .chatBox span {

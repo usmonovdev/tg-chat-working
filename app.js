@@ -30,6 +30,13 @@ function share() {
     message.appendChild(document.createTextNode(input))
 
     if (input.length < 1) {
+        if (chatMessage.length < 1 && input.length == 0) {
+            gif.style.display = "block"
+            console.log("0")
+        } else {
+            gif.style.display = "none"
+            console.log("1")
+        }
         message.style.display = "none"
         gif.style.display = "block"
     } else {
