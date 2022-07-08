@@ -59,24 +59,12 @@ body {
     overflow-y:auto;
     overflow-x: hidden;
     height: 450px;
-    padding: 10px;
     background-image: url(./img/pattern.svg);
     background-size: cover;
     background-color: #ddf0ff;
-}
-
-.chatBox img {
-    width: 120px;
-    padding: 20px 10px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.443);
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    transform-origin: center;
-    animation: scale 200ms both;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
 }
 
 @keyframes scale {
@@ -95,17 +83,20 @@ body {
 
 .chatBox span {
     padding: 5px;
-    max-width: 70% !important;
     display: block;
     word-wrap: break-word;
     background: var(--user-text);
     margin-bottom: 5px;
     border-radius: 5px;
     position: relative;
-    right: -105px;
-    top: 94.5%;
     text-align: right;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137);
+}
+
+.chatBox .spanBoxR {
+    float: right;
+    max-width: 100%;
+    position: relative;
 }
 
 .container .inputBox {
@@ -122,6 +113,15 @@ body {
     font-size: 1.5em;
     cursor: pointer;
     margin-right: 10px;
+}
+
+.inputBox .sendL {
+    border: none;
+    color: var(--blue) !important;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 10px;
+    transform: rotate(180deg);
 }
 
 .inputBox input {
@@ -144,11 +144,16 @@ body {
     cursor: pointer;
 }
 
-.inputBox .emojiIcon {
+#form .emojiIcon {
     font-size: 1.5em;
     color: var(--second);
     cursor: pointer;
     margin-right: 10px;
+}
+
+.inputBox #form {
+    display: flex;
+    align-items: center;
 }
 
 ::-webkit-scrollbar {

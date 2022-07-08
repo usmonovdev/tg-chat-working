@@ -1,46 +1,20 @@
-let gif = document.getElementById("gif")
-
-let gifs = [
-    "img/1.gif",
-    "img/2.gif",
-    "img/3.gif",
-    "img/4.gif",
-    "img/5.gif",
-    "img/6.gif",
-    "img/7.gif"
-]
-
-let randomgif;
-
-function getRandomGif() {
-    return gifs[Math.floor(Math.random() * gifs.length)]
-}
-
-function addToDom() {
-    randomgif = getRandomGif()
-    gif.src = randomgif;
-}
-addToDom()
-
-function share() {
+function shareR() {
     let input = document.getElementById("input").value
-    let chatMessage = document.getElementById("chatMes")
+    let chatMessage = document.querySelector(".chatBox")
     let message = document.createElement("span")
-    chatMessage.appendChild(message)
+    let div = document.createElement("div")
+    div.setAttribute("class", "spanBoxR")
+    div.appendChild(message)
+    chatMessage.appendChild(div)
     message.appendChild(document.createTextNode(input))
 
     if (input.length < 1) {
-        if (chatMessage.length < 1 && input.length == 0) {
-            gif.style.display = "block"
-            console.log("0")
-        } else {
-            gif.style.display = "none"
-            console.log("1")
-        }
         message.style.display = "none"
-        gif.style.display = "block"
+        console.log("if")
     } else {
         message.style.display = "block"
-        gif.style.display = "none"
+        console.log("else")
     }
+
+    document.getElementById("form").reset()
 }

@@ -21,16 +21,17 @@
             </div>
         </div>
         <div class="chatBox" id="chatMes">
-            <img src="" alt="chat gif" id="gif" class="scale" loading="lazy">
         </div>
         <div class="inputBox">
             <input type="file" id="sendFile">
             <label for="sendFile">
                 <ion-icon name="attach-outline" class="sendFileIcon"></ion-icon>
             </label>
-            <input type="text" id="input" placeholder="Write a message..." focused>
-            <i class="ri-emotion-line emojiIcon"></i>
-            <ion-icon name="send" class="send" onclick="share()"></ion-icon>
+            <form id="form">
+                <input type="text" id="input" placeholder="Write a message..." focused>
+                <ion-icon name="send" class="sendL" onclick="shareL()"></ion-icon>
+                <ion-icon name="send" class="send" onclick="shareR()"></ion-icon>
+            </form>
         </div>
     </div>
 
