@@ -59,11 +59,11 @@ body {
     overflow-y:auto;
     overflow-x: hidden;
     height: 450px;
-    background-image: url(./img/pattern.svg);
+    background-image: url(./img/bg.jpg);
     background-size: cover;
     background-color: #ddf0ff;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 10px;
 }
 
@@ -86,17 +86,37 @@ body {
     display: block;
     word-wrap: break-word;
     background: var(--user-text);
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     border-radius: 5px;
     position: relative;
     text-align: right;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137);
+    max-width: 70%;
 }
 
 .chatBox .spanBoxR {
     float: right;
     max-width: 100%;
     position: relative;
+    display: flex;
+    justify-content: right;
+}
+
+.spanBoxR img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137);
+}
+
+.chatBox .spanBoxL {
+    float: left;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    word-wrap: break-word;
 }
 
 .container .inputBox {
@@ -125,12 +145,11 @@ body {
 }
 
 .inputBox input {
-    width: 240px;
+    width: 230px;
     height: 40px;
     margin-right: 10px;
     outline: none;
     border: none;
-    margin-left: 10px;
 }
 
 .inputBox #sendFile {
@@ -158,4 +177,21 @@ body {
 
 ::-webkit-scrollbar {
     width: 0px;
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container .chatBox {
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .inputBox input {
+        width: 180px;
+    }
 }
