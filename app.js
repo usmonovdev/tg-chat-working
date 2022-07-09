@@ -43,6 +43,7 @@ function shareL() {
 function sendFile() {
     let chatMessage = document.querySelector(".chatBox")
     let img = document.createElement("img")
+    img.setAttribute("class", "imgOpen")
     let div = document.createElement("div")
     div.setAttribute("class", "spanBoxR")
     div.appendChild(img)
@@ -62,5 +63,5 @@ function sendFile() {
 
             reader.readAsDataURL(choosFile)
         }
-    })
+    });
 }
