@@ -1,3 +1,26 @@
+let gif = document.getElementById("gif");
+let gifArr = [
+    "img/1.gif",
+    "img/2.gif",
+    "img/3.gif",
+    "img/4.gif",
+    "img/5.gif",
+    "img/6.gif",
+    "img/7.gif"
+];
+let addDom;
+
+function sortgifs() {
+    return gifArr[Math.floor(Math.random() * gifArr.length)]
+}
+
+function toDom() {
+    addDom = sortgifs()
+    gif.src = addDom;
+}
+
+toDom();
+
 function shareR() {
     let input = document.getElementById("input").value
     let chatMessage = document.querySelector(".chatBox")
@@ -10,9 +33,11 @@ function shareR() {
 
     if (input.length < 1) {
         message.style.display = "none"
+        gif.style.display = "block"
         console.log("if")
     } else {
         message.style.display = "block"
+        gif.style.display = "none"
         console.log("else")
     }
 
@@ -31,9 +56,11 @@ function shareL() {
 
     if (input.length < 1) {
         message.style.display = "none"
+        gif.style.display = "block"
         console.log("if")
     } else {
         message.style.display = "block"
+        gif.style.display = "none"
         console.log("else")
     }
 
@@ -64,4 +91,10 @@ function sendFile() {
             reader.readAsDataURL(choosFile)
         }
     });
+
+    if (input.length < 1) {
+        gif.style.display = "block"
+    } else {
+        gif.style.display = "none"
+    }
 }
